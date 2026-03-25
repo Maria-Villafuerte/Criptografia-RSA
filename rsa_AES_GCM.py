@@ -47,7 +47,7 @@ def decrypt_document(pkg: bytes, recipient_private_key_pem: bytes, passphrase: b
     return cipher_aes.decrypt_and_verify(ciphertext, tag)
 
 if __name__ == '__main__':
-    generar_par_claves(2048)
+    generar_par_claves(3072)
 
     with open("public_key.pem", "rb") as f: pub = f.read()
     with open("private_key.pem", "rb") as f: priv = f.read()
